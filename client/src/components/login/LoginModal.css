@@ -1,0 +1,48 @@
+.login-modal {
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 10px !important;
+
+}
+
+
+.login-modal-header {
+    display: flex !important;
+    justify-content: center !important;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(250, 205, 58);
+    background: black !important;
+    padding-bottom: 50px !important;
+    border: 0 !important;
+
+}
+
+
+.login-modal-body {
+    height: 400px;
+    text-align: center;
+    border: 0 !important;
+    background: black !important;
+    color: white;
+    letter-spacing: 4px;
+
+
+}
+
+.login-hr {
+    justify-self: center;
+    margin-top: 0;
+    margin-bottom: 50px;
+    padding: 1px;
+    color: rgb(250, 205, 58);
+
+}
+
+.login-modal-form {
+    margin-top: 50px;
+}
+
+.login-button {
+    color: white !important;
+    font-weight: bold !important;
+}

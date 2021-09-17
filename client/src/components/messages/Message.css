@@ -1,0 +1,12 @@
+.message {
+    max-width: 300px;
+    margin-top: 20px;
+    word-wrap: break-word;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    font-style: italic;
+    font-size: 20px;
+    background: rgb(236, 193, 2);
+    color: white
+}

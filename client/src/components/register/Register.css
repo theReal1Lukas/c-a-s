@@ -1,0 +1,28 @@
+.register-form {
+    border: 3px solid rgb(236, 236, 236);
+    border-radius: 10px;
+}
+
+.register-form>p {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+}
+
+.anonymus-img {
+    width: 100px;
+    margin-bottom: 30px;
+}
+
+.info-section {
+    margin: 25px 15px 15px 0;
+    font-size: 30px;
+}
+
+.info-icon {
+    cursor: pointer;
+    color: #5bc0de
+}
+
+.info-icon:hover {
+    color: #138496
+}
