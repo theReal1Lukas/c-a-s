@@ -40,7 +40,7 @@ export default function Register() {
     const getUsers = async () => {
       try {
         const res = await axios.get(
-          "https://encypted-chat-app.herokuapp.com/api/users/"
+          "https://stormy-tundra-12181.herokuapp.com/api/users/"
         );
         setAllUsers(res.data);
       } catch (err) {
@@ -56,7 +56,7 @@ export default function Register() {
     e.preventDefault();
     const user = { username: regUsername, password: regPassword, pin };
     axios.post(
-      "https://encypted-chat-app.herokuapp.com/api/auth/register",
+      "https://stormy-tundra-12181.herokuapp.com/api/auth/register",
       user
     );
     setRegPassword("");

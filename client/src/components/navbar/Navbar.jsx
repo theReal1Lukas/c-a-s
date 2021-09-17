@@ -20,7 +20,7 @@ export default function NavigationBar({ user }) {
     };
     try {
       await axios.post(
-        "https://encypted-chat-app.herokuapp.com/api/conversations",
+        "https://stormy-tundra-12181.herokuapp.com/api/conversations",
         convMembers
       );
       setAddFriend("");

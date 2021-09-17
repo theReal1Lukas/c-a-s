@@ -4,7 +4,7 @@ export const loginCall = async (userCredential, dispatch) => {
   dispatch({ type: "LOGIN_START" });
   try {
     const res = await axios.post(
-      "https://encypted-chat-app.herokuapp.com/api/auth/login",
+      "https://stormy-tundra-12181.herokuapp.com/api/auth/login",
       userCredential
     );
     dispatch({ type: "LOGIN_SUCCESS", payload: res.data });

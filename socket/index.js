@@ -1,6 +1,6 @@
 const io = require("socket.io")(9000, {
   cors: {
-    origin: "https://encypted-chat-app.herokuapp.com/",
+    origin: "https://stormy-tundra-12181.herokuapp.com/",
   },
 });
 const jwt = require("jsonwebtoken");
