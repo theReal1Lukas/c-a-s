@@ -21,7 +21,7 @@ export default function Conversation({
     const getUser = async () => {
       try {
         const res = await axios.get(
-          "https://stormy-tundra-12181.herokuapp.com/api/users/" + friendId
+          "https://rocky-reaches-36155.herokuapp.com/api/users/" + friendId
         );
 
         setUser(res.data);

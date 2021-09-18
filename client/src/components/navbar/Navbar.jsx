@@ -20,7 +20,7 @@ export default function NavigationBar({ user }) {
     };
     try {
       await axios.post(
-        "https://stormy-tundra-12181.herokuapp.com/api/conversations",
+        "https://rocky-reaches-36155.herokuapp.com/api/conversations",
         convMembers
       );
       setAddFriend("");

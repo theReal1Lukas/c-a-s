@@ -39,7 +39,7 @@ export default function Dashboard() {
       try {
         if (friendId) {
           const res = await axios.get(
-            "https://stormy-tundra-12181.herokuapp.com/api/users/" + friendId
+            "https://rocky-reaches-36155.herokuapp.com/api/users/" + friendId
           );
           setFriend(res.data);
         }
@@ -56,7 +56,7 @@ export default function Dashboard() {
     const getConversation = async () => {
       try {
         const res = await axios.get(
-          "https://stormy-tundra-12181.herokuapp.com/api/conversations/" +
+          "https://rocky-reaches-36155.herokuapp.com/api/conversations/" +
             user._id
         );
         setConversations(res.data);
@@ -73,7 +73,7 @@ export default function Dashboard() {
     const getMessage = async () => {
       try {
         const res = await axios.get(
-          "https://stormy-tundra-12181.herokuapp.com/api/messages/" +
+          "https://rocky-reaches-36155.herokuapp.com/api/messages/" +
             currentChat?._id
         );
 
@@ -90,7 +90,7 @@ export default function Dashboard() {
   const handleDeleteMessages = async () => {
     try {
       await axios.delete(
-        "https://stormy-tundra-12181.herokuapp.com/api/messages/delete/" +
+        "https://rocky-reaches-36155.herokuapp.com/api/messages/delete/" +
           currentChat?._id
       );
       window.location.reload();
@@ -151,7 +151,7 @@ export default function Dashboard() {
 
     try {
       const res = await axios.post(
-        "https://stormy-tundra-12181.herokuapp.com/api/messages/",
+        "https://rocky-reaches-36155.herokuapp.com/api/messages/",
         msng
       );
       setMessages([...messages, res.data]);
