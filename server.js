@@ -6,11 +6,13 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const path = require("path");
 const PORT = process.env.PORT || 5000;
-const http = require("http");
-const server = http.createServer(app);
+const http = require("http").Server(app);
 const jwt = require("jsonwebtoken");
-const { Server } = require("socket.io");
-const io = new Server(server);
+const io = require("socket.io")(http, {
+  cors: {
+    origin: "https://rocky-reaches-36155.herokuapp.com",
+  },
+});
 
 dotenv.config();
 
@@ -94,4 +96,4 @@ io.on("connection", (socket) => {
 
 ///////////////////// SOCKET /////////////////////
 
-server.listen(PORT, () => console.log(`server is running on port ${PORT}`));
+http.listen(PORT, () => console.log(`server is running on port ${PORT}`));
