@@ -90,8 +90,6 @@ io.on("connection", (socket) => {
   });
 });
 
-// io.listen(PORT, () => console.log(`Socket is running on port ${PORT}`));
-
 ///////////////////// SOCKET /////////////////////
 
 http.listen(PORT, () => console.log(`server is running on port ${PORT}`));
