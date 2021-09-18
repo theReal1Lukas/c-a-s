@@ -15,8 +15,8 @@ dotenv.config();
 app.use(cors());
 app.use(express.json());
 
-const uri = process.env.MONGO_URL;
-mongoose.connect(uri);
+// const uri = ;
+mongoose.connect(process.env.MONGO_URL);
 
 const connection = mongoose.connection;
 connection.once("open", () => {
