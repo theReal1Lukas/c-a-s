@@ -6,9 +6,11 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const path = require("path");
 const PORT = process.env.PORT || 5000;
-const http = require("http").Server(app);
+const http = require("http");
+const server = http.createServer(app);
 const jwt = require("jsonwebtoken");
-const io = require("socket.io")(http);
+const { Server } = require("socket.io");
+const io = new Server(server);
 
 dotenv.config();
 
@@ -16,7 +18,7 @@ app.use(cors());
 app.use(express.json());
 
 const uri = process.env.MONGO_URL;
-mongoose.connect(`${uri}`);
+mongoose.connect(uri);
 
 const connection = mongoose.connection;
 connection.once("open", () => {
@@ -92,4 +94,4 @@ io.on("connection", (socket) => {
 
 ///////////////////// SOCKET /////////////////////
 
-http.listen(PORT, () => console.log(`server is running on port ${PORT}`));
+server.listen(PORT, () => console.log(`server is running on port ${PORT}`));
