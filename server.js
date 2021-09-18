@@ -16,7 +16,7 @@ app.use(cors());
 app.use(express.json());
 
 const uri = process.env.MONGO_URL;
-mongoose.connect(`${uri}`);
+mongoose.connect(uri);
 
 const connection = mongoose.connection;
 connection.once("open", () => {
