@@ -6,9 +6,9 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const path = require("path");
 const PORT = process.env.PORT || 5000;
-const http = require("http").Server(app);
+const https = require("http").Server(app);
 const jwt = require("jsonwebtoken");
-const io = require("socket.io")(http);
+const io = require("socket.io")(https);
 
 dotenv.config();
 
@@ -76,7 +76,7 @@ io.on("connection", (socket) => {
       { expiresIn: "1h" }
     );
 
-    io.to(user?.socketId).emit("getMessage", {
+    io.to(user.socketId).emit("getMessage", {
       senderId,
       text: cryptMessage,
     });
@@ -92,4 +92,4 @@ io.on("connection", (socket) => {
 
 ///////////////////// SOCKET /////////////////////
 
-http.listen(PORT, () => console.log(`server is running on port ${PORT}`));
+https.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
