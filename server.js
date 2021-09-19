@@ -8,11 +8,7 @@ const path = require("path");
 const PORT = process.env.PORT || 5000;
 const http = require("http").Server(app);
 const jwt = require("jsonwebtoken");
-const io = require("socket.io")(http, {
-  cors: {
-    origin: "https://rocky-reaches-36155.herokuapp.com",
-  },
-});
+const io = require("socket.io")(http);
 
 dotenv.config();
 
@@ -80,7 +76,7 @@ io.on("connection", (socket) => {
       { expiresIn: "1h" }
     );
 
-    io.to(user.socketId).emit("getMessage", {
+    io.to(user?.socketId).emit("getMessage", {
       senderId,
       text: cryptMessage,
     });
