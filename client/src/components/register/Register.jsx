@@ -72,14 +72,11 @@ export default function Register() {
       ) : (
         <>
           <div
-            className="d-flex flex-column justify-content-center align-items-center text-center"
+            className="main-register-container d-flex flex-column justify-content-center align-items-center text-center"
             style={{ height: "100vh" }}
           >
-            <div className="register-form d-flex flex-column ">
-              <Form
-                style={{ padding: "50px 100px 0 100px" }}
-                onSubmit={addUser}
-              >
+            <div className="register-form-container d-flex flex-column ">
+              <Form className="register-form-inputs" onSubmit={addUser}>
                 <div className="d-flex justify-content-center">
                   <img className="anonymus-img" src={logo} alt="anonymus" />
                 </div>
