@@ -38,6 +38,7 @@ export default function Message({ friend, message, currentUser }) {
           : friend?.username}
       </div>
       <div
+        className="time-ago"
         style={
           message.senderId === currentUser._id
             ? { display: "flex", justifyContent: "end", marginRight: "10px" }

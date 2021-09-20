@@ -36,7 +36,7 @@ export default function NavigationBar({ user }) {
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="navbarScroll" className="toggler" />
       <Navbar.Collapse className="justify-content-center" id="navbarScroll">
-        <div style={{ margin: "50px", color: "white" }}>
+        <div className="current-user-id">
           <h4>Your ID</h4>
           <h6>
             <em style={{ color: "white" }}>{user._id}</em>

@@ -10,3 +10,8 @@
     background: rgb(236, 193, 2);
     color: white
 }
+
+.message-author,
+.time-ago {
+    color: rgb(100, 100, 100)
+}

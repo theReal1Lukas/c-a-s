@@ -12,6 +12,16 @@
     margin-left: 50px;
 }
 
+/* .navbar-search-form {
+    margin-left: 50px;
+} */
+
+.current-user-id {
+    margin: 50px;
+    color: white;
+
+}
+
 .logout-button {
     margin-left: auto;
     margin-right: 25px;
@@ -33,6 +43,18 @@
 
 
 @media(max-width:991px) {
+    .navigation-bar {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .navbar-logo {
+        margin-left: 0;
+    }
+
+    .current-user-id {
+        margin: 20px 0 20px 0;
+    }
 
     .navigation-bar {
         height: auto;
@@ -41,17 +63,11 @@
 
     .search-form {
         margin-bottom: 30px;
+        /* margin-left: 50px; */
     }
 
     .logout-button {
         float: right;
         margin: 0 0 20px 0;
-    }
-}
-
-@media(max-width:570px) {
-    .navbar-search-form {
-        /* width: 400px; */
-        margin-left: 50px;
     }
 }

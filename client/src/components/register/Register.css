@@ -1,6 +1,10 @@
-.register-form {
+.register-form-container {
     border: 3px solid rgb(236, 236, 236);
     border-radius: 10px;
+}
+
+.register-form-inputs {
+    padding: 50px 100px 0 100px;
 }
 
 .register-form>p {
@@ -25,4 +29,15 @@
 
 .info-icon:hover {
     color: #138496
+}
+
+@media(max-width:500px) {
+
+    .register-form-inputs {
+        padding: 50px 50px 0 50px;
+    }
+
+    .main-register-container {
+        height: 100%;
+    }
 }
