@@ -8,7 +8,11 @@ const path = require("path");
 const PORT = process.env.PORT || 5000;
 const http = require("http").Server(app);
 const jwt = require("jsonwebtoken");
-const io = require("socket.io")(http);
+const io = require("socket.io")(http, {
+  cors: {
+    origin: "https://pure-savannah-29011.herokuapp.com/",
+  },
+});
 
 dotenv.config();
 
@@ -16,7 +20,7 @@ app.use(cors());
 app.use(express.json());
 
 const uri = process.env.MONGO_URL;
-mongoose.connect(`${uri}`);
+mongoose.connect(uri);
 
 const connection = mongoose.connection;
 connection.once("open", () => {
