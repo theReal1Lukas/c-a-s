@@ -6,9 +6,9 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const path = require("path");
 const PORT = process.env.PORT || 5000;
-const https = require("http").Server(app);
+const http = require("http").Server(app);
 const jwt = require("jsonwebtoken");
-const io = require("socket.io")(https);
+const io = require("socket.io")(http);
 
 dotenv.config();
 
@@ -92,4 +92,4 @@ io.on("connection", (socket) => {
 
 ///////////////////// SOCKET /////////////////////
 
-https.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+http.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
