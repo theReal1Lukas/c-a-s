@@ -76,7 +76,7 @@ io.on("connection", (socket) => {
       {
         data: text,
       },
-      "MyOtherBiggestSecret",
+      process.env.SECRET,
       { expiresIn: "1h" }
     );
 
