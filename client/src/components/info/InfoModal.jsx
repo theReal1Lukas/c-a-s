@@ -4,7 +4,9 @@ export default function InfoModal({ show, close }) {
   return (
     <div>
       <Modal centered show={show} onHide={close}>
-        <Modal.Header>Info</Modal.Header>
+        <Modal.Header>
+          <h4>Info</h4>
+        </Modal.Header>
         <Modal.Body className="info-modal-description">
           <p>
             This is anonymus and encrypted chat application, that is why you
