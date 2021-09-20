@@ -10,7 +10,7 @@ router.post("/", async (req, res) => {
       {
         data: req.body.text,
       },
-      process.env.SECRET,
+      "MyBiggestSecret",
       { expiresIn: "60000" }
     );
 
